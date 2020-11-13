@@ -1,0 +1,34 @@
+h1 {
+    font-size: 22px;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+span {
+    margin-left: 250px;
+}
+
+.expected-grad {
+    font-size: 15px;
+}
+
+.list-header {
+    margin-left: 50px;
+    margin-bottom: 0px;
+}
+
+ul {
+    margin-left: 50px;
+}
+
+li {
+    margin-bottom:3px;
+    margin-top: 3px;
+}
+
+div.CV {
+    max-width: 500px;
+    position: relative;
+}

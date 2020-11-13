@@ -3,7 +3,7 @@ import React from "react"
 const NavigationTab = ({label, link}) => {
     return (
         <div> 
-            {label}
+            <a href ={link}>{label}</a>
         </div>
     )
 }

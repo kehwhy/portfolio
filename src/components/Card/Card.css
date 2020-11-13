@@ -1,0 +1,12 @@
+.card {
+    padding: 10px;
+    max-width: 30%;
+    display: inline;
+    float: left;
+    background-color:  #0dbc79;
+    margin: 20px;
+}
+
+.card-body {
+    background-color:  #0dbc79;
+}
