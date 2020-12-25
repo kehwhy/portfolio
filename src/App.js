@@ -1,53 +1,56 @@
-import React, { useRef } from 'react';
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { fab } from '@fortawesome/free-brands-svg-icons'
-import { far } from '@fortawesome/free-regular-svg-icons'
+import React from 'react';
 import profile_pic from "./Images/profile_pic.png"
+import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa'
 import Tabs from "react-bootstrap/Tabs"
 import Tab from "react-bootstrap/Tab"
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { Heading, Icon, Pane, Paragraph } from "evergreen-ui"
 import CV from './components/CV/CV';
 import Projects from './components/Projects/Projects';
-import MyIcon from './components/MyIcon/MyIcon';
+
+import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css';
-
-
-library.add(
-  fab,
-  far
-)
 
 const App = () => {
 
-  const githubRef = useRef("https://github.com/kehwhy")
-  const linkedInRef = useRef("https://www.linkedin.com/in/kathleen-younge-777908174/")
-  const emailRef = useRef("mailto:kathleen.younge@mail.mcgill.ca")
-
   return (
-    <div className="App">
-      <header className="name-title">
-      Katie Younge
-      </header>
-      <img className="profile-pic" src={profile_pic} alt=""/>
-      <p className="intro">I am a 3rd year Software Engineering student at McGill University
-      who is passionate about machine learning and artificial intelligence, as well as increasing 
-      access to technology for children.</p>
-      <div className="icons">
-        <MyIcon link={linkedInRef} library="fab" iconName="linkedin" />
-        <MyIcon link={githubRef} library="fab" iconName="github" />
-        <MyIcon link={emailRef} library="far" iconName="envelope" />
-      </div>
-      <div className="tabs-div">
-      <Tabs classname="myClass" defaultActiveKey="CV" id="main-nav-tabs">
-        <Tab eventKey="CV" title="CV">
-          <CV/>
-        </Tab>
-        <Tab eventKey="projects" title="Projects">
-          <Projects/>
-        </Tab>
-      </Tabs>
-      </div>
-    </div>
+    <Pane className="App" elevation={3}>
+      <Pane className="left_pane"> 
+        <img className="profile-pic" src={profile_pic} alt=""/>
+        <Heading size={900} className="name-title">
+        Katie Younge
+        </Heading>
+        <Paragraph size={700} className="intro">3rd year Software Engineering student at McGill University
+        with a passion for machine learning and artificial intelligence, as well as increasing 
+        access to technology for children.</Paragraph>
+        <div className="icons">
+          <div className='icon'>
+            <a href={"https://www.linkedin.com/in/kathleen-younge-777908174/"}>
+                  <Icon color="#187795" icon={FaLinkedin} size={32}></Icon>
+            </a>
+          </div>
+          <div className='icon'>
+            <a href={"https://github.com/kehwhy"}>
+                  <Icon color="#187795" icon={FaGithub} size={32}></Icon>
+            </a>
+          </div>
+          <div className='icon'>
+            <a href={"mailto:kathleen.younge@mail.mcgill.ca"}>
+                  <Icon color="#187795" icon={FaEnvelope} size={32}></Icon>
+            </a>
+          </div>
+        </div>
+      </Pane>
+      <Pane className="tabs-div">
+        <Tabs classname="myClass" defaultActiveKey="CV" id="main-nav-tabs">
+          <Tab eventKey="CV" title="CV">
+            <CV/>
+          </Tab>
+          <Tab eventKey="projects" title="Projects">
+            <Projects/>
+          </Tab>
+        </Tabs>
+      </Pane>
+    </Pane>
   );
 }
 
