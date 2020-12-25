@@ -15,6 +15,7 @@ const App = () => {
   return (
     <Pane className="App" elevation={3}>
       <Pane className="left_pane"> 
+        <Pane className="container">
         <img className="profile-pic" src={profile_pic} alt=""/>
         <Heading size={900} className="name-title">
         Katie Younge
@@ -39,6 +40,7 @@ const App = () => {
             </a>
           </div>
         </div>
+        </Pane>
       </Pane>
       <Pane className="tabs-div">
         <Tabs classname="myClass" defaultActiveKey="CV" id="main-nav-tabs">

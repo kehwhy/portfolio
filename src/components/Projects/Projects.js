@@ -1,11 +1,11 @@
 import React from 'react'
 import "./Projects.css"
 
-import { Badge, Card, Heading, Paragraph } from 'evergreen-ui'
+import { Badge, Card, Heading, Pane, Paragraph } from 'evergreen-ui'
 
 const Projects = () => {
     return (
-        <div>
+        <Pane className="tab-pane">
             <Card className="card" marginLeft={20} elevation={2} border={true}> 
                 <Heading className="title" size={600}>McGill Engineering Week Event Website</Heading>
                 <div className="badges">
@@ -75,7 +75,7 @@ const Projects = () => {
                     Java, and Java Swing.
                 </Paragraph>
             </Card>
-        </div>
+        </Pane>
     )
 }
 
