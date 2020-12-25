@@ -17,12 +17,12 @@ const App = () => {
       <Pane className="left_pane"> 
         <Pane className="container">
         <img className="profile-pic" src={profile_pic} alt=""/>
-        <Heading size={900} className="name-title">
+        <Heading size={800} className="name-title">
         Katie Younge
         </Heading>
         <Paragraph size={700} className="intro">3rd year Software Engineering student at McGill University
         with a passion for machine learning and artificial intelligence, as well as increasing 
-        access to technology for children.</Paragraph>
+        access to technology for children</Paragraph>
         <div className="icons">
           <div className='icon'>
             <a href={"https://www.linkedin.com/in/kathleen-younge-777908174/"}>

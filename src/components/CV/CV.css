@@ -2,16 +2,12 @@ h1 {
     font-size: 22px;
 }
 
-h2 {
-    font-size: 18px;
+.CV div {
+    padding-top: 0px;
 }
 
-span {
-    margin-left: 250px;
-}
-
-.expected-grad {
-    font-size: 15px;
+.extra-padding {
+    padding-bottom: 10px;
 }
 
 .list-header {
@@ -23,12 +19,7 @@ ul {
     margin-left: 50px;
 }
 
-li {
-    margin-bottom:3px;
-    margin-top: 3px;
-}
-
 div.CV {
-    max-width: 75%;
+    max-width: 85%;
     position: relative;
 }
