@@ -1,0 +1,34 @@
+.base {
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+    @include themed() {
+        background-image: linear-gradient(to right, t($color1), t($color2))
+    }
+}
+
+.seasonButton {
+    display: inline-block;
+    padding: 2%;
+    background-color: transparent;
+
+    :focus {
+        outline: none;
+        box-shadow: none;
+    }
+
+    svg {
+        fill: white;
+    }
+}
+
+.main-page{
+    margin: 2vw;
+    
+    @include themed() {
+        background-color: t($color5);
+    }
+}

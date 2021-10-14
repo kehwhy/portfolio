@@ -1,0 +1,64 @@
+.base {
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.theme--fall .base {
+  background-image: -webkit-gradient(linear, left top, right top, from(#bc6c25), to(#dda15e));
+  background-image: linear-gradient(to right, #bc6c25, #dda15e);
+}
+
+.theme--spring .base {
+  background-image: -webkit-gradient(linear, left top, right top, from(#88c5a1), to(#afd297));
+  background-image: linear-gradient(to right, #88c5a1, #afd297);
+}
+
+.theme--summer .base {
+  background-image: -webkit-gradient(linear, left top, right top, from(#db8d6e), to(#e4c9a0));
+  background-image: linear-gradient(to right, #db8d6e, #e4c9a0);
+}
+
+.theme--winter .base {
+  background-image: -webkit-gradient(linear, left top, right top, from(#42687c), to(#84a5b8));
+  background-image: linear-gradient(to right, #42687c, #84a5b8);
+}
+
+.seasonButton {
+  display: inline-block;
+  padding: 2%;
+  background-color: transparent;
+}
+
+.seasonButton :focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.seasonButton svg {
+  fill: white;
+}
+
+.main-page {
+  margin: 2vw;
+}
+
+.theme--fall .main-page {
+  background-color: #fefae0;
+}
+
+.theme--spring .main-page {
+  background-color: #ffffff;
+}
+
+.theme--summer .main-page {
+  background-color: #f2f2f2;
+}
+
+.theme--winter .main-page {
+  background-color: #707571;
+}
+/*# sourceMappingURL=app.css.map */

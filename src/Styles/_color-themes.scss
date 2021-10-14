@@ -1,0 +1,55 @@
+
+$color1: 'color1';
+$color2: 'color2';
+$color3: 'color3';
+$color4: 'color4';
+$color5: 'color5';
+
+$themes: (
+  fall: (
+    color1: #bc6c25,  
+    color2: #dda15e,
+    color3: #606C38,
+    color4: #283618,
+    color5: #fefae0
+  ),
+  spring: (
+    color1: #88c5a1,  
+    color2: #afd297,
+    color3: #e0e293,
+    color4: #e1a18e,
+    color5: #ffffff
+  ),
+  summer: (
+    color1: #db8d6e,  
+    color2: #e4c9a0,
+    color3: #82dff5,
+    color4: #eccb48,
+    color5: #f2f2f2
+  ),
+  winter: (
+    color1: #42687c,  
+    color2: #84a5b8,
+    color3: #b3daf1,
+    color4: #cbcbcb,
+    color5: #707571
+  )
+);
+
+@mixin themed() {
+  @each $theme, $map in $themes {
+    .theme--#{$theme} & {
+      $theme-map: () !global;
+      @each $key, $submap in $map {
+        $value: map-get(map-get($themes, $theme), '#{$key}');
+        $theme-map: map-merge($theme-map, ($key: $value)) !global;
+      }
+      @content;
+      $theme-map: null !global;
+    }
+  }
+}
+
+@function t($key) {
+  @return map-get($theme-map, $key);
+}
